@@ -21,6 +21,8 @@ public class CartSuitTest {
   JavascriptExecutor js;
 
   CartPage cartPage;
+  CheckoutPage checkoutPage;
+  OrderPage orderPage;
 
   @BeforeAll
   public void setUp() {
@@ -32,6 +34,8 @@ public class CartSuitTest {
   @BeforeEach
   public void setupTest(){
     cartPage = new CartPage(driver);
+    checkoutPage = new CheckoutPage(driver);
+    orderPage = new OrderPage(driver);
     driver.get("http://localhost:3000/");
   }
 
@@ -104,5 +108,17 @@ public class CartSuitTest {
     cartPage.addWineButton.click();
     //Total must be €1.25 + €2.00 + €3.00
     assertEquals(cartPage.totalField.getText(), "€6.25");
+  }
+
+  @Test
+  public void confirmCola() {
+    //Add a cola
+    cartPage.addColaButton.click();
+    //Press checkout
+    cartPage.checkoutButton.click();
+    //Press confirm button
+    checkoutPage.orderButton.click();
+    //See confirmation screen
+    assertEquals(orderPage.confirmationMessage.getText(), "Coming right up! ~bzzzt~");
   }
 }
