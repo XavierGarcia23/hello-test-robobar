@@ -41,18 +41,68 @@ public class CartSuitTest {
   }
 
   @Test
-  public void colaTest() {
+  public void colaTest1() {
     //Add a cola
     cartPage.addColaButton.click();
     //Total must be €1.25
     assertEquals(cartPage.totalField.getText(), "€1.25");
+  }
+
+  @Test
+  public void colaTest2() {
+    //Add a cola
+    cartPage.addColaButton.click();
     //Add a cola
     cartPage.addColaButton.click();
     //Total must be €2.50
     assertEquals(cartPage.totalField.getText(), "€2.50");
+  }
+
+  @Test
+  public void beerTest1() {
+    //Add a beer
+    cartPage.addBeerButton.click();
+    //Total must be €2.00
+    assertEquals(cartPage.totalField.getText(), "€2.00");
+  }
+
+  @Test
+  public void beerTest2() {
+    //Add a beer
+    cartPage.addBeerButton.click();
+    //Add a beer
+    cartPage.addBeerButton.click();
+    //Total must be €4.00
+    assertEquals(cartPage.totalField.getText(), "€4.00");
+  }
+
+  @Test
+  public void wineTest1() {
+    //Add a wine
+    cartPage.addWineButton.click();
+    //Total must be €3.00
+    assertEquals(cartPage.totalField.getText(), "€3.00");
+  }
+
+  @Test
+  public void wineTest2() {
+    //Add a wine
+    cartPage.addWineButton.click();
+    //Add a wine
+    cartPage.addWineButton.click();
+    //Total must be €6.00
+    assertEquals(cartPage.totalField.getText(), "€6.00");
+  }
+
+  @Test
+  public void allProducts() {
     //Add a cola
     cartPage.addColaButton.click();
-    //Total must be €3.75
-    assertEquals(cartPage.totalField.getText(), "€3.75");
+    //Add a beer
+    cartPage.addBeerButton.click();
+    //Add a wine
+    cartPage.addWineButton.click();
+    //Total must be €1.25 + €2.00 + €3.00
+    assertEquals(cartPage.totalField.getText(), "€6.25");
   }
 }

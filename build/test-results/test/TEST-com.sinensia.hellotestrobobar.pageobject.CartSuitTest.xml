@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sinensia.hellotestrobobar.pageobject.CartSuitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-08T09:24:53" hostname="ubuntu" time="2.073">
+<testsuite name="com.sinensia.hellotestrobobar.pageobject.CartSuitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-08T10:27:08" hostname="ubuntu" time="2.626">
   <properties/>
-  <testcase name="colaTest()" classname="com.sinensia.hellotestrobobar.pageobject.CartSuitTest" time="2.073"/>
+  <testcase name="colaTest()" classname="com.sinensia.hellotestrobobar.pageobject.CartSuitTest" time="2.626"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.80 (7f0488e8ba0d8e019187c6325a16c29d9b7f4989-refs/branch-heads/4758@{#972}) on port 32529
+  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.80 (7f0488e8ba0d8e019187c6325a16c29d9b7f4989-refs/branch-heads/4758@{#972}) on port 4263
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Feb 08, 2022 10:24:53 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Feb 08, 2022 11:27:08 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
