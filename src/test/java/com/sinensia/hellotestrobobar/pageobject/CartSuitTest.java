@@ -50,5 +50,9 @@ public class CartSuitTest {
     cartPage.addColaButton.click();
     //Total must be €2.50
     assertEquals(cartPage.totalField.getText(), "€2.50");
+    //Add a cola
+    cartPage.addColaButton.click();
+    //Total must be €3.75
+    assertEquals(cartPage.totalField.getText(), "€3.75");
   }
 }

@@ -14,6 +14,9 @@ public class OrderPage {
     @FindBy(css = "p")
     public WebElement confirmationMessage;
 
+    @FindBy(css = ".btn-default")
+    public WebElement cancelButton;
+
     public OrderPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
